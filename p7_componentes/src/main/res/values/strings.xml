@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Texto En Compose</string>
+
+    <string name="string_res">Texto desde strings.xml</string>
+    <string name="format_string_res">Cantidad de ítems: %1$s</string>
+    <string name="paragraph_res">Este es un párrafo que será alineado con el parámetro textAlign</string>
+    <string-array name="string_array_res">
+        <item>String 1</item>
+        <item>String 2</item>
+        <item>String 3</item>
+    </string-array>
+</resources>
