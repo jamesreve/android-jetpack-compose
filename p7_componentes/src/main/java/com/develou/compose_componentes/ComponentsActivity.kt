@@ -5,8 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.ui.unit.ExperimentalUnitApi
-import com.develou.compose_componentes.examples.TextUrlExample
+import com.develou.compose_componentes.examples.TextField.TextFieldScreen
 
 class ComponentsActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +13,7 @@ class ComponentsActivity : ComponentActivity() {
         setContent {
             MaterialTheme {
                 Surface {
-                    TextUrlExample()
+                    TextFieldScreen()
                 }
             }
         }
