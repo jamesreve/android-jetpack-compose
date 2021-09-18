@@ -1,4 +1,4 @@
-## Botones En Compose
+## Floating Action Button En Compose
 
 En este paquete encontrarás el código de todos los ejemplos de mi tutorial [FloatingActionButton En Compose](https://www.develou.com/floating-action-button--en-compose/) de Develou.com.
 Cada archivo Kotlin contiene las funciones componibles asociadas a cada sección del tutorial:

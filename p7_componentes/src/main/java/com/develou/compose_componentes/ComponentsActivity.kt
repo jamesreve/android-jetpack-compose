@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import com.develou.compose_componentes.examples.FloatingActionButton.FABScaffoldScreen
+import com.develou.compose_componentes.examples.Checkbox.CheckboxesScreen
 
 class ComponentsActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +13,7 @@ class ComponentsActivity : ComponentActivity() {
         setContent {
             MaterialTheme {
                 Surface {
-                    FABScaffoldScreen()
+                    CheckboxesScreen()
                 }
             }
         }
