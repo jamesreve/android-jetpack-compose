@@ -1,21 +1,28 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext {
-        compose_version = '1.0.2'
-    }
+
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:7.0.2"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21"
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:7.1.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+ext {
+    compileSdk = 31
+    minSdk = 21
+    targetSdk = 31
+
+    compose_version = '1.1.0'
+    activityCompose = '1.4.0'
+    viewModelCompose ='2.5.0-alpha02'
+    material ='1.5.0'
+    appCompat ='1.4.1'
+    androidCoreKtx = '1.7.0'
+    desugarJdkVersion = '1.1.5'
 }

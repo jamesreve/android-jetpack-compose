@@ -1,4 +1,4 @@
-package com.develou.compose_componentes.examples
+package com.develou.compose_componentes.examples.Text
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
@@ -24,7 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
-import com.develou.compose_temas.R
+import com.develou.compose_componentes.R
 
 @Composable
 fun ShowText() {

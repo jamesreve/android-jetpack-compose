@@ -10,7 +10,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.*
 import androidx.compose.ui.text.style.TextAlign
-import com.develou.compose_temas.R
+import com.develou.compose_componentes.R
 import kotlin.math.max
 
 @Composable

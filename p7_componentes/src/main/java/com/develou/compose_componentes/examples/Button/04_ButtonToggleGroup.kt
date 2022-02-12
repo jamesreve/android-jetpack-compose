@@ -14,7 +14,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.datasource.LoremIpsum
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
-import com.develou.compose_temas.R
+import com.develou.compose_componentes.R
 
 @Composable
 fun ButtonToggleGroupExample() {

@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.develou.compose_temas.R
+import com.develou.compose_componentes.R
 import java.time.LocalDateTime
 import kotlin.random.Random
 

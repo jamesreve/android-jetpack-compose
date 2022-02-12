@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Texto En Compose</string>
+    <string name="app_name">Componentes En Compose</string>
 
     <string name="string_res">Texto desde strings.xml</string>
     <string name="format_string_res">Cantidad de ítems: %1$s</string>

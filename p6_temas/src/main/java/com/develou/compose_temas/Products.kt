@@ -17,7 +17,6 @@ import com.develou.compose_temas.theme.ProductsTheme
 
 private val padding = Modifier.padding(horizontal = 16.dp)
 
-@ExperimentalUnitApi
 @Composable
 fun Products() {
     ProductCard(Modifier.padding(16.dp))
@@ -90,7 +89,6 @@ fun BaselineThemePreview() {
     }
 }
 
-@ExperimentalUnitApi
 @Composable
 @Preview("Tema Personalizado Claro")
 fun CustomThemePreview() {

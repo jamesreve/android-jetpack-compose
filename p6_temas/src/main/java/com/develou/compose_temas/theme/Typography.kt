@@ -20,7 +20,7 @@ val Nunito = FontFamily(
     Font(R.font.nunito_bold, FontWeight.Bold)
 )
 
-@ExperimentalUnitApi
+@OptIn(ExperimentalUnitApi::class)
 val ProductsTypography = Typography(
     h6 = TextStyle(
         fontFamily = Overlock,

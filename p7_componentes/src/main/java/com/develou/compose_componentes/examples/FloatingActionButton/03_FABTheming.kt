@@ -20,7 +20,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.*
-import com.develou.compose_temas.R
+import com.develou.compose_componentes.R
 
 @Composable
 fun FABShapeExample() {

@@ -8,7 +8,6 @@ import androidx.compose.ui.unit.ExperimentalUnitApi
 import com.develou.compose_temas.theme.ProductsTheme
 
 class ProductsActivity : ComponentActivity() {
-    @ExperimentalUnitApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
