@@ -1,4 +1,4 @@
-package com.develou.compose_componentes.examples.RadioButton
+package com.develou.compose_componentes.examples.Switch
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.clickable
@@ -6,31 +6,29 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.develou.compose_componentes.examples.RadioButton.SurfaceForPreview
 
 @Composable
-fun RadioButtonScreen() {
+fun SwitchScreen() {
 
     val tutorialSections = listOf(
-        "1. Crear Un RadioButton",
-        "2. Añadir Etiqueta A Un RadioButton",
-        "3. Crear Un Grupo De RadioButtons",
-        "4. Usar El Modificador selectable()",
-        "5. Deshabilitar Un RadioButton",
-        "6. Cambiar El Color De Un RadioButton"
+        "1. Crear Un Switch",
+        "2. Añadir Etiqueta A Un Switch",
+        "3. Deshabilitar Un Switch",
+        "4. Cambiar Color De Un Switch"
     )
 
     Column {
 
         Text(
             modifier = Modifier.padding(all = 16.dp),
-            text = "RadioButtons En Compose",
+            text = "Switch En Compose",
             style = MaterialTheme.typography.h5.merge(),
         )
         LazyColumn(
@@ -76,14 +74,16 @@ fun SectionRow(
         }
 
         val contentModifier = if (isExpanded) Modifier else Modifier.height(0.dp)
-        Box(modifier = contentModifier) {
+
+        Box(
+            modifier = contentModifier.padding(24.dp),
+            contentAlignment = Alignment.Center
+        ) {
             when (index) {
                 0 -> Example1()
                 1 -> Example2()
                 2 -> Example3()
                 3 -> Example4()
-                4 -> Example5()
-                5 -> Example6()
             }
         }
     }
@@ -91,17 +91,8 @@ fun SectionRow(
 
 @Composable
 @Preview
-private fun RadioButtonScreenPreview() {
-    SurfaceForPreview(Modifier.padding(24.dp)) {
-        RadioButtonScreen()
-    }
-}
-
-@Composable
-fun SurfaceForPreview(modifier: Modifier=Modifier, content: @Composable () -> Unit) {
-    MaterialTheme {
-        Surface(modifier = modifier) {
-            content()
-        }
+private fun SwitchScreenPreview() {
+    SurfaceForPreview {
+        SwitchScreen()
     }
 }
