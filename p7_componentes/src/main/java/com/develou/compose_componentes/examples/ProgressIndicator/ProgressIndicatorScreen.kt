@@ -1,4 +1,4 @@
-package com.develou.compose_componentes.examples.Switch
+package com.develou.compose_componentes.examples.ProgressIndicator
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.clickable
@@ -15,20 +15,21 @@ import androidx.compose.ui.unit.dp
 import com.develou.compose_componentes.examples.RadioButton.SurfaceForPreview
 
 @Composable
-fun SwitchScreen() {
-
+fun ProgressIndicatorScreen() {
     val tutorialSections = listOf(
-        "1. Crear Un Switch",
-        "2. Añadir Etiqueta A Un Switch",
-        "3. Deshabilitar Un Switch",
-        "4. Cambiar Color De Un Switch"
+        "1. LinearProgressIndicator determinado",
+        "2. LinearProgressIndicator indeterminado",
+        "3. LinearProgressIndicator coloreado",
+        "4. CircularProgressIndicator determinado",
+        "5. CircularProgressIndicator indeterminado",
+        "6. CircularProgressIndicator coloreado"
     )
 
     Column {
 
         Text(
             modifier = Modifier.padding(all = 16.dp),
-            text = "Switch En Compose",
+            text = "Indicadores De Progreso En Compose",
             style = MaterialTheme.typography.h5.merge(),
         )
         LazyColumn(
@@ -49,7 +50,7 @@ fun SectionRow(
     section: String
 ) {
 
-    var isExpanded by remember { mutableStateOf(false) }
+    var isExpanded by remember { mutableStateOf(true) }
     val startExample = { isExpanded = !isExpanded }
     Column(
         modifier = Modifier
@@ -79,19 +80,21 @@ fun SectionRow(
             contentAlignment = Alignment.Center
         ) {
             when (index) {
-                0 -> Example1()
-                1 -> Example2()
-                2 -> Example3()
-                3 -> Example4()
+                0 -> DeterminedLinearProgress()
+                1 -> UndeterminedLinearProgress()
+                2 -> ColoredLinearProgress()
+                3 -> UploadFileView()
+                4 -> UndeterminedCircularProgress()
+                5 -> ColoredCircularProgress()
             }
         }
     }
 }
 
-@Composable
 @Preview
-private fun SwitchScreenPreview() {
+@Composable
+fun ProgressIndicatorPreview(){
     SurfaceForPreview {
-        SwitchScreen()
+        ProgressIndicatorScreen()
     }
 }
