@@ -8,7 +8,6 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.develou.compose_componentes.examples.RadioButton.SurfaceForPreview
@@ -40,7 +39,9 @@ fun DeterminedLinearProgress() {
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.padding(all = 16.dp).fillMaxWidth()
+        modifier = Modifier
+            .padding(all = 16.dp)
+            .fillMaxWidth()
     ) {
         Text(text = "Sincronizando datos")
 
@@ -59,7 +60,9 @@ fun DeterminedLinearProgress() {
 fun UndeterminedLinearProgress() {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.padding(all = 16.dp).fillMaxWidth()
+        modifier = Modifier
+            .padding(all = 16.dp)
+            .fillMaxWidth()
     ) {
         Text(text = "Escaneando medidores")
 
@@ -71,26 +74,28 @@ fun UndeterminedLinearProgress() {
 
 @Composable
 fun ColoredLinearProgress() {
-    val blue500 = Color(0xFF2196F3)
+    /*val blue500 = Color(0xFF2196F3)
     Box(
         contentAlignment = Alignment.Center,
-        modifier = Modifier.padding(16.dp).fillMaxWidth()
+        modifier = Modifier
+            .padding(16.dp)
+            .fillMaxWidth()
     ) {
         LinearProgressIndicator(
             color = blue500,
             backgroundColor = Color.LightGray
         )
-    }
+    }*/
 }
 
 @Composable
 @Preview
-private fun Example1Preview() {
+private fun LinearPreview() {
     SurfaceForPreview(
         Modifier
             .fillMaxWidth()
             .height(100.dp)
     ) {
-        ColoredLinearProgress()
+        UndeterminedLinearProgress()
     }
 }

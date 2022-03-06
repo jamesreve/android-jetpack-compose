@@ -119,7 +119,7 @@ fun ColoredCircularProgress() {
 
 @Composable
 @Preview
-fun CircularProgressIndicatorPreview() {
+fun CircularPreview() {
     SurfaceForPreview(
         Modifier
             .fillMaxWidth()
