@@ -1,17 +1,24 @@
 package com.develou.compose_componentes
 
+import com.develou.compose_componentes.examples.Slider.calculateSegment
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
-import org.junit.Assert.*
-
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 class ExampleUnitTest {
+
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun testCalculateSegment() {
+        val range = 0F..100F
+        val steps = 4
+
+        assertEquals(0F, calculateSegment("", range, steps))
+        assertEquals(0F, calculateSegment("0", range, steps))
+        assertEquals(0F, calculateSegment("5", range, steps))
+        assertEquals(20F, calculateSegment("20", range, steps))
+        assertEquals(40F, calculateSegment("30", range, steps))
+        assertEquals(60F, calculateSegment("65", range, steps))
+        assertEquals(80F, calculateSegment("75", range, steps))
+        assertEquals(100F, calculateSegment("400", range, steps))
     }
+
 }
