@@ -24,7 +24,7 @@ fun MenusScreen() {
 
 @Preview
 @Composable
-fun MenusScrenPreview() {
+fun MenusScreenPreview() {
     SurfaceForPreview(
         modifier = Modifier.fillMaxSize()
     ) {
