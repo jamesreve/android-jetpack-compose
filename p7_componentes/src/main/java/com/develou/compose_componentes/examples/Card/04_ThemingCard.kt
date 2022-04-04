@@ -10,11 +10,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.develou.compose_componentes.R
-import com.develou.compose_componentes.examples.RadioButton.SurfaceForPreview
 
 @Composable
 fun ThemingCard() {
@@ -35,15 +33,7 @@ fun ThemingCard() {
             ),
             shapes = MaterialTheme.shapes.copy(medium = RoundedCornerShape(0))
         ) {
-            StandardCard(elevation = 0.dp)
+            StandardCard(elevation = 4.dp)
         }
-    }
-}
-
-@Preview
-@Composable
-private fun E4() {
-    SurfaceForPreview {
-        ThemingCard()
     }
 }

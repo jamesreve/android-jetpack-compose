@@ -14,9 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.develou.compose_componentes.examples.RadioButton.SurfaceForPreview
 
 @Composable
 fun StylingCard() {
@@ -58,23 +56,39 @@ fun StylingCard() {
 
         StandardCard(
             modifier = Modifier.padding(16.dp),
-            background = when (backgroundColorSelection) {
-                "Amarillo" -> Color(0xFFFFF176)
-                "Azul" -> Color(0xFF64B5F6)
-                "Rojo" -> Color(0xFFE57373)
-                else -> Color.White
-            },
+            background = configBackgroundColor(backgroundColorSelection),
             contentColor = configContentColor(contentColorSelection),
             shape = configShape(shapeSelection)
         )
     }
 }
 
-fun configContentColor(contentColorSelection: String) = when (contentColorSelection) {
+@Composable
+private fun configBackgroundColor(backgroundColorSelection: String) =
+    when (backgroundColorSelection) {
+        "Amarillo" -> Color(0xFFFFF176)
+        "Azul" -> Color(0xFF64B5F6)
+        "Rojo" -> Color(0xFFE57373)
+        else -> Color.White
+    }
+
+private fun configContentColor(contentColorSelection: String) = when (contentColorSelection) {
     "Gris Azulado" -> Color(0xFF263238)
-    "Indigo" -> Color(0xFF1A237E)
+    "Índigo" -> Color(0xFF1A237E)
     "Marrón" -> Color(0xFF3e2723)
     else -> Color.Black
+}
+
+@Composable
+private fun configShape(
+    selection: String
+): Shape {
+    val cornerSize = 16.dp
+
+    return if (selection == "Redondeada")
+        RoundedCornerShape(cornerSize)
+    else
+        CutCornerShape(cornerSize)
 }
 
 @Composable
@@ -102,29 +116,9 @@ fun ConfigSection(
 }
 
 @Composable
-private fun configShape(
-    selection: String
-): Shape {
-    val cornerSize = 8.dp
-
-    return if (selection == "Redondeada")
-        RoundedCornerShape(cornerSize)
-    else
-        CutCornerShape(cornerSize)
-}
-
-@Composable
 fun ConfigRadioButton(label: String, selected: Boolean, onClick: () -> Unit) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         RadioButton(selected = selected, onClick = onClick)
         Text(text = label)
-    }
-}
-
-@Composable
-@Preview
-fun Preview2() {
-    SurfaceForPreview {
-        StylingCard()
     }
 }

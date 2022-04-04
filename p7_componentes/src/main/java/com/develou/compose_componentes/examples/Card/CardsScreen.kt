@@ -51,7 +51,7 @@ fun CardsScreen() {
 }
 
 @Composable
-internal fun StandardCard(
+fun StandardCard(
     modifier: Modifier = Modifier,
     elevation: Dp = 1.dp,
     border: BorderStroke? = null,
@@ -67,6 +67,7 @@ internal fun StandardCard(
         border = border,
         modifier = modifier
     ) {
+        // Contenedor
         Column {
             Row(
                 Modifier
@@ -75,6 +76,7 @@ internal fun StandardCard(
                     .padding(start = 16.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
+                // Miniatura
                 Box(
                     modifier = Modifier
                         .background(color = Color.LightGray, shape = CircleShape)
@@ -90,13 +92,17 @@ internal fun StandardCard(
                 Spacer(modifier = Modifier.width(32.dp))
 
                 Column(Modifier.fillMaxWidth()) {
+                    // Encabezado
                     Text(text = "Título", style = MaterialTheme.typography.h6)
+
+                    // Subtítulo
                     CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.medium) {
                         Text(text = "Texto secundario", style = MaterialTheme.typography.body1)
                     }
                 }
             }
 
+            // Multimedia
             Image(
                 painterResource(id = R.drawable.ic_image),
                 contentDescription = "Multimedia de tarjeta",
@@ -105,9 +111,11 @@ internal fun StandardCard(
                     .fillMaxWidth()
                     .height(194.dp)
             )
-            Row(Modifier.padding(start = 16.dp, end = 24.dp, top = 16.dp)) {
-                CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.medium) {
 
+            Row(Modifier.padding(start = 16.dp, end = 24.dp, top = 16.dp)) {
+
+                // Texto de ayuda
+                CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.medium) {
                     Text(
                         text = LoremIpsum(50).values.take(10).joinToString(separator = " "),
                         maxLines = 2,
@@ -126,6 +134,8 @@ internal fun StandardCard(
                         .padding(horizontal = 8.dp)
                         .fillMaxWidth()
                 ) {
+
+                    // Botones
                     Row(modifier = Modifier.align(Alignment.CenterStart)) {
 
                         TextButton(onClick = { /*TODO*/ }) {
@@ -138,6 +148,8 @@ internal fun StandardCard(
                             Text(text = "ACCIÓN 2")
                         }
                     }
+
+                    // Iconos
                     Row(modifier = Modifier.align(Alignment.CenterEnd)) {
                         IconButton(onClick = { /*TODO*/ }) {
                             Icon(Icons.Default.Favorite, contentDescription = null)
@@ -151,7 +163,6 @@ internal fun StandardCard(
             }
         }
     }
-
 }
 
 @Preview

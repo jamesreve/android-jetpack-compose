@@ -14,13 +14,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.develou.compose_componentes.examples.Card.ExpandableCardItem.ItemDetail
-import com.develou.compose_componentes.examples.RadioButton.SurfaceForPreview
 
-data class CardItem(val title: String, val text: String)
+data class CardItem(
+    val title: String,
+    val text: String
+)
 
 data class ExpandableCardItem(
     val title: String,
@@ -35,7 +36,6 @@ fun CardList() {
     val exampleOptions = listOf("Clickear Card", "Expandir Card")
     var exampleSelected by remember { mutableStateOf(exampleOptions.first()) }
 
-
     Column {
 
         ConfigSection(
@@ -43,7 +43,7 @@ fun CardList() {
             options = exampleOptions,
             selection = exampleSelected,
             onOptionSelected = { exampleSelected = it },
-            modifier = Modifier.padding( 16.dp)
+            modifier = Modifier.padding(16.dp)
         )
 
         Divider()
@@ -62,7 +62,7 @@ fun ListWithClickableCards() {
     val items = List(10) { index ->
         val position = index + 1
         CardItem(
-            title = "Titulo $position",
+            title = "Título $position",
             text = "Texto secundario $position"
         )
     }
@@ -101,14 +101,14 @@ fun ListWithExpandableCards() {
     val items = List(10) { index ->
         val position = index + 1
         ExpandableCardItem(
-            title = "Titulo $position",
+            title = "Título $position",
             secondaryText = "Texto secundario $position",
             ItemDetail("Elementos adicionales $position")
         )
     }
 
     LazyColumn(
-        contentPadding = PaddingValues(vertical = 8.dp,horizontal = 16.dp),
+        contentPadding = PaddingValues(vertical = 8.dp, horizontal = 16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         items(items) { item ->
@@ -182,12 +182,4 @@ fun ExpandableCardIcon(
 
 fun Context.toast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-}
-
-@Preview
-@Composable
-fun E3() {
-    SurfaceForPreview {
-        CardList()
-    }
 }

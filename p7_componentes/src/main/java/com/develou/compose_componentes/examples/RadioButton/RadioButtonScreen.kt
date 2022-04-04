@@ -11,6 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
@@ -98,9 +99,13 @@ private fun RadioButtonScreenPreview() {
 }
 
 @Composable
-fun SurfaceForPreview(modifier: Modifier=Modifier, content: @Composable () -> Unit) {
+fun SurfaceForPreview(
+    modifier: Modifier = Modifier,
+    color: Color = Color.White,
+    content: @Composable () -> Unit
+) {
     MaterialTheme {
-        Surface(modifier = modifier) {
+        Surface(modifier = modifier, color = color) {
             content()
         }
     }
