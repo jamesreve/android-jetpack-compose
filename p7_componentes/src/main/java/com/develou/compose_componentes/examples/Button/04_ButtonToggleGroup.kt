@@ -33,7 +33,7 @@ fun ButtonToggleGroupExample() {
 }
 
 @Composable
-private fun ButtonToggleGroup( // 1
+fun ButtonToggleGroup( // 1
     options: List<String>,
     selectedOption: String,
     onOptionSelect: (String) -> Unit,
@@ -125,7 +125,7 @@ fun ButtonToggleGroupIconsExample() {
 }
 
 @Composable
-private fun ButtonToggleGroup(
+fun ButtonToggleGroup(
     options: List<Int>,
     selectedOption: Int,
     onOptionSelect: (Int) -> Unit,

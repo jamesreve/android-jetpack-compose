@@ -135,7 +135,9 @@ private fun ExpandableRow(expandableItem: ExpandableItem) {
         control = {
             ExpandCollapseIcon(
                 expanded = isExpanded,
-                onIconClick = { isExpanded = !isExpanded })
+                onIconClick = { isExpanded = !isExpanded },
+                modifier = Modifier
+            )
         }
     )
 
@@ -152,11 +154,12 @@ private fun ExpandableRow(expandableItem: ExpandableItem) {
 }
 
 @Composable
-private fun ExpandCollapseIcon(
+fun ExpandCollapseIcon(
     expanded: Boolean,
-    onIconClick: () -> Unit = {}
+    onIconClick: () -> Unit,
+    modifier: Modifier
 ) {
-    IconButton(onClick = onIconClick) {
+    IconButton(onClick = onIconClick, modifier = modifier) {
         Icon(
             Icons.Filled.ArrowDropDown,
             "Icono de control para lista expandible",

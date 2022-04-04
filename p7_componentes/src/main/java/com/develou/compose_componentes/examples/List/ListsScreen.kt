@@ -86,7 +86,7 @@ private fun Theming() {
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-private fun ExamplesMenu(options: List<Example>) {
+fun ExamplesMenu(options: List<Example>) {
     var exampleMenuOpen by remember { mutableStateOf(false) }
     var selectedOption by remember { mutableStateOf(options.first()) }
 

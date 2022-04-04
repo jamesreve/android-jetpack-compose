@@ -364,6 +364,6 @@ private fun Space() {
 @Preview
 fun ExamplesPreview() {
     Surface {
-        TextUrlExample()
+        SoftWrapExample()
     }
 }
