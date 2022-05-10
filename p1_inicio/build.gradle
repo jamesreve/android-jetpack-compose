@@ -38,6 +38,7 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion compose_version
     }
+    namespace 'com.develou.compose_inicio'
 }
 
 dependencies {
