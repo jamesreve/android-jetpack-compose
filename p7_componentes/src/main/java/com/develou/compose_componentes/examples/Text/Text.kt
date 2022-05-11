@@ -157,7 +157,7 @@ fun LineHeightExample() {
 }
 
 @Composable
-fun OverflowExample() {
+internal fun OverflowExample() {
     Box(modifier = Modifier.width(300.dp)) {
         Column(Modifier.width(200.dp)) {
             TitleExample("Clip")
